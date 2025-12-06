@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback</title>
+  </head>
+  <body>
+    <script>
+      function abc() {
+        document.write("Hello from the ABC function");
+      }
+
+      function add(n1, n2, callback) {
+        document.writeln(n1 + n2 + "<br>");
+        callback();
+      }
+
+      add(10, 10, abc);
+    </script>
+  </body>
+</html>

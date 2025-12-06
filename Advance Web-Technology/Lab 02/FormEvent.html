@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Event</title>
+  </head>
+  <body>
+    <form id="form">
+      <label>User name</label>
+      <input type="text" />
+      <br />
+      <label>Password</label>
+      <input type="password" />
+      <br />
+      <button type="Submit">Submit</button>
+      <button type="reset">Reset</button>
+      <br />
+    </form>
+
+    <h2 id="area"></h2>
+
+    <script>
+      var formS = document.getElementById("form");
+
+      formS.addEventListener(
+        onsubmit,
+        () => (document.getElementById("area").innerHTML = "Submit")
+      );
+    </script>
+  </body>
+</html>

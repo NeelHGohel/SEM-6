@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>let vs var</title>
+  </head>
+  <body>
+    <script>
+      function abc() {
+        var a = 20;
+        document.write("var " + a + " <br>");
+        if (true) {
+          let a = 30;
+          document.write("let " + a + " <br>");
+        }
+        document.write("var " + a + " <br>");
+      }
+      abc();
+    </script>
+  </body>
+</html>

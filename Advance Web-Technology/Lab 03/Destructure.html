@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructure</title>
+  </head>
+  <body>
+    <script>
+      student1 = {
+        name: "neel",
+        dept: "CSE",
+        class: "C",
+      };
+
+      let { name, dept } = student1;
+
+      document.write("Destructuring Object <br>");
+      document.write(name + "<br>");
+
+      var arr = [1, 2, 3, 4, 5];
+
+      let [a0, a1, a2] = arr;
+
+      document.write("Destructuring Array <br>");
+      document.write(a1);
+    </script>
+  </body>
+</html>

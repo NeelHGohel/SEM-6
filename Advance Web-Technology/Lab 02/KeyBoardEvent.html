@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KeyBoard Event</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="KeyBoard"
+      onkeydown="onKeyDown()"
+      onkeypress="onKeyPress()"
+      onkeyup="onKeyUp()"
+    />
+
+    <h3 id="area"></h3>
+
+    <script>
+      function onKeyDown() {
+        document.getElementById("area").innerHTML = "You press key down";
+      }
+      function onKeyPress() {
+        document.getElementById("area").innerHTML = "You press key";
+      }
+      function onKeyUp() {
+        document.getElementById("area").innerHTML = "You press key up";
+      }
+    </script>
+  </body>
+</html>
