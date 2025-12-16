@@ -13,7 +13,7 @@ export default function RootLayout({
           src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
           type="module"
         ></script>
-        <nav className="relative bg-black-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-black/10">
+        {/* <nav className="relative bg-black-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-black/10">
           <div className="mx-auto max-w-full px-4">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -110,7 +110,7 @@ export default function RootLayout({
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"></div>
             </div>
           </div>
-        </nav>
+        </nav> */}
 
         <div>{children}</div>
       </body>
