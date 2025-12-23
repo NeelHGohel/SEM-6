@@ -1,6 +1,5 @@
 import { prisma } from "@/app/lib/prisma";
 import Link from "next/link";
-import React, { useId } from "react";
 
 async function UsersTaskByID({ params }: { params: Promise<{ id: number }> }) {
   const { id } = await params;
@@ -20,6 +19,9 @@ async function UsersTaskByID({ params }: { params: Promise<{ id: number }> }) {
             <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider border-b">
               Description
             </th>
+            <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider border-b">
+              IsCompleted
+            </th>
           </tr>
         </thead>
 
@@ -31,6 +33,9 @@ async function UsersTaskByID({ params }: { params: Promise<{ id: number }> }) {
               </td>
               <td className="px-6 py-4 text-sm text-gray-600">
                 {d.taskdescription}
+              </td>
+              <td className="px-6 py-4 text-sm text-gray-600">
+                {d.iscompleted}
               </td>
             </tr>
           ))}

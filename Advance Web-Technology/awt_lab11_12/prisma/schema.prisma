@@ -11,7 +11,7 @@ model tasks {
   taskid          Int     @id
   tasktitle       String  @db.VarChar(100)
   taskdescription String? @db.VarChar(255)
-  iscompleted     Boolean
+  iscompleted     String  @db.VarChar(100)
   userid          Int?
   users           users?  @relation(fields: [userid], references: [userid], onDelete: NoAction, onUpdate: NoAction)
 }
