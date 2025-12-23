@@ -6,7 +6,7 @@ function layout({ children }: { children: React.ReactNode }) {
       <div>
         <h1>Task List</h1>
       </div>
-      <div>{children}</div>
+      {children}
     </>
   );
 }
