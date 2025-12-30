@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model tasks {
+  taskid          Int     @id
+  tasktitle       String  @db.VarChar(100)
+  taskdescription String? @db.VarChar(255)
+  iscompleted     String  @db.VarChar(100)
+  userid          Int?
+  users           users?  @relation(fields: [userid], references: [userid], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model users {
+  userid   Int     @id
+  username String  @db.VarChar(50)
+  password String  @db.VarChar(100)
+  tasks    tasks[]
+}
