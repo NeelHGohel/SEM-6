@@ -1,7 +1,7 @@
 import { prisma } from "@/app/lib/prisma";
 import Link from "next/link";
 
-async function UsersTaskByID({ params }: { params: Promise<{ id: number }> }) {
+async function UsersTaskByID({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const data = await prisma.tasks.findMany({
     where: {
@@ -26,8 +26,8 @@ async function UsersTaskByID({ params }: { params: Promise<{ id: number }> }) {
         </thead>
 
         <tbody className="bg-white divide-y divide-gray-200">
-          {data.map((d, index) => (
-            <tr key={index} className="hover:bg-gray-50 transition-colors">
+          {data.map((d) => (
+            <tr key={d.taskid} className="hover:bg-gray-50 transition-colors">
               <td className="px-6 py-4 text-sm text-gray-800 font-medium">
                 {d.tasktitle}
               </td>
