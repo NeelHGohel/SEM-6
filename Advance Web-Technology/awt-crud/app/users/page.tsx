@@ -34,6 +34,9 @@ async function Task() {
                 Status
               </th>
               <th className="px-1 py-1 text-left text-sm font-semibold text-gray-700 uppercase border-b">
+                Edit
+              </th>
+              <th className="px-1 py-1 text-left text-sm font-semibold text-gray-700 uppercase border-b">
                 Delete
               </th>
             </tr>
@@ -52,6 +55,14 @@ async function Task() {
                     className="inline-block rounded-md bg-indigo-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-indigo-700 transition"
                   >
                     More
+                  </Link>
+                </td>
+                <td className="px-1 py-1">
+                  <Link
+                    href={`/users/edit/${u.userid}`}
+                    className="inline-block rounded-md bg-indigo-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-indigo-700 transition"
+                  >
+                    Edit
                   </Link>
                 </td>
                 <td className="px-1 py-1">
