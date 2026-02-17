@@ -3,25 +3,20 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
+// use of useEffect hook
 function App() {
   const [count, setCount] = useState(10);
 
   useEffect(() => {
     setInterval(() => {
-      setCount(count + 1);
-      console.log(count);
+      setCount((c) => c + 1);
     }, 1000);
-  });
-
-  function abc() {
-    setCount(count + 1);
-    console.log({ count });
-  }
+  }, []);
 
   return (
     <>
       <h1>Hello world {count}</h1>
-      <button onClick={abc}>Increment</button>
+      <button>Increment</button>
     </>
   );
 }
