@@ -1,23 +1,36 @@
 import React from "react";
 import { AuthProvider, useAuth } from "./Lab-25/AuthContext";
-import Login from "./Lab-25/Login";
-import Dashboard from "./Lab-25/Dashboard";
+import { useSelector } from "react-redux";
+import Dashboard from "./Lab-26/Dashboard";
+import Login from "./Lab-26/Login";
 
-function Main() {
-  const { user } = useAuth();
-
-  return <div>{user ? <Dashboard /> : <Login />}</div>;
-}
-
+// LAb-26
 function App() {
-  return (
-    <AuthProvider>
-      <Main />
-    </AuthProvider>
-  );
+  const isAuth = useSelector((state) => state.auth.isAuthenticated);
+
+  return <div>{isAuth ? <Dashboard /> : <Login />}</div>;
 }
 
 export default App;
+
+//Lab 25
+// function Main() {
+//   const { user } = useAuth();
+
+//   return <div>{user ? <Dashboard /> : <Login />}</div>;
+// }
+
+// function App() {
+//   return (
+//     <AuthProvider>
+//       <Main />
+//     </AuthProvider>
+//   );
+// }
+
+// export default App;
+
+//simple
 
 // const NameContext = createContext();
 
